@@ -7,43 +7,37 @@
         "files": {}
     },
     "installed_plugins": {
+        "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "com.demo.pushnotification.dmunoz"
+        },
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.tecnoaplica.cotizadorvirtual"
+            "PACKAGE_NAME": "com.demo.pushnotification.dmunoz"
         },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.tecnoaplica.cotizadorvirtual"
+            "PACKAGE_NAME": "com.demo.pushnotification.dmunoz"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.tecnoaplica.cotizadorvirtual"
+            "PACKAGE_NAME": "com.demo.pushnotification.dmunoz"
         },
         "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "com.tecnoaplica.cotizadorvirtual"
+            "PACKAGE_NAME": "com.demo.pushnotification.dmunoz"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.tecnoaplica.cotizadorvirtual"
+            "PACKAGE_NAME": "com.demo.pushnotification.dmunoz"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.tecnoaplica.cotizadorvirtual"
+            "PACKAGE_NAME": "com.demo.pushnotification.dmunoz"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.tecnoaplica.cotizadorvirtual"
+            "PACKAGE_NAME": "com.demo.pushnotification.dmunoz"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.tecnoaplica.cotizadorvirtual"
+            "PACKAGE_NAME": "com.demo.pushnotification.dmunoz"
         },
-        "com.phonegap.plugins.PushPlugin": {
-            "PACKAGE_NAME": "com.tecnoaplica.cotizadorvirtual"
-        },
-        "cordova-plugin-badge": {
-            "PACKAGE_NAME": "com.demo.pushnotification"
-        },
-        "de.appplant.cordova.plugin.local-notification": {
-            "PACKAGE_NAME": "com.demo.pushnotification"
+        "phonegap-plugin-push": {
+            "SENDER_ID": "XXXXXXX",
+            "PACKAGE_NAME": "com.demo.pushnotification.dmunoz"
         }
     },
-    "dependent_plugins": {
-        "cordova-plugin-app-event": {
-            "PACKAGE_NAME": "com.demo.pushnotification"
-        }
-    }
+    "dependent_plugins": {}
 }

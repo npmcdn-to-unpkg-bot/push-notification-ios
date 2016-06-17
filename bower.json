@@ -1,7 +1,9 @@
 {
   "name": "NotificationPushExampleIOS",
   "private": "true",
-  "devDependencies": {},
+  "devDependencies": {
+    "platform.js": "platform#^1.3.1"
+  },
   "dependencies": {
     "lodash": "~3.10.1",
     "ionic": "driftyco/ionic-bower#v1.2.1",

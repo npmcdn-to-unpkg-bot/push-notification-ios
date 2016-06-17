@@ -6,44 +6,42 @@ angular.module("app")
                 onComplete: '&' //Complete Step
             },
             templateUrl: 'views/firstRun/configure/directives/pushNotifications.html',
-            controller: function($scope, $cordovaBadge, $cordovaPush, $cordovaSplashscreen) {
-                //Hide Splash Screen 
-                if (ionic.Platform.isWebView()) {
-                    $cordovaSplashscreen.hide();
-                }
-
+            controller: function($scope, $cordovaBadge) {
+               
                 // Activate Function 
                 $scope.activate = function() {
+                    debugger;
 
                     //ONLY IN DEVICE
                     if (ionic.Platform.isWebView()) {
-                        var iosConfig = {
-                            "badge": true,
-                            "sound": true,
-                            "alert": true,
-                        };
 
-                        $cordovaPush.register(iosConfig).then(function(deviceToken) {
-                            //f9b9e8f01ab2a609346e85652428f61772819391a9e046b145af7db191dac496
-                            $log.debug(deviceToken);
-
-                            //PROMOT FOR NOTIFICATION ACCESS
-                            $cordovaBadge.hasPermission().then(function() {
-
-                                //Trigger to parent scope  
-                                $scope.onComplete();
-                            });
-
-
-
-
-                        }, function() {
-                            //ASK FOR PERMISSION
-                            window.plugin.notification.local.promptForPermission();
-
-                            //RECHECK!
-                            $scope.activate();
+                        var push = PushNotification.init({
+                            android: {
+                                senderID: "12345679"
+                            },
+                            ios: {
+                                alert: "true",
+                                badge: "true",
+                                sound: "true"
+                            },
+                            windows: {}
                         });
+
+                        push.on('registration', function(data) {
+                            $log.debug(data);
+                            $scope.onComplete();
+                        });
+
+                        push.on('notification', function(data) {
+                            $log.debug(data);
+                        });
+
+                        push.on('error', function(e) {
+                            $log.error(e);
+                        });
+
+
+
 
                     } else {
                         //Trigger to parent scope  

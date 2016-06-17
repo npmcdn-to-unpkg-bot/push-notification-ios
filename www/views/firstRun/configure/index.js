@@ -3,7 +3,8 @@ angular.route('blank.firstRun/configure/index', function(
     $state,
     $log,
     $LocalStorage,
-     $Configuration
+    $Configuration,
+    $cordovaSplashscreen
 ) {
     //---------------------------------------------------
     //New Slider (Ionic 1.2)
@@ -14,6 +15,15 @@ angular.route('blank.firstRun/configure/index', function(
         }
     });
     //---------------------------------------------------
+
+    //Hide Splash Screen 
+    ionic.Platform.ready(function() {
+        if (ionic.Platform.isWebView()) {
+            $cordovaSplashscreen.hide();
+        }
+    });
+
+
 
     $scope.next = function(id) {
         switch (id) {

@@ -9,6 +9,7 @@
     </author>
   <content src="index.html"/>
   <access origin="*"/>
+  <allow-navigation href="*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
@@ -20,7 +21,7 @@
     <config-file parent="NSAppTransportSecurity" target="*-Info.plist">
       <dict>
         <key>NSAllowsArbitraryLoads</key>
-        <true></true>
+        <true/>
       </dict>
     </config-file>
     <icon height="57" src="resources/ios/icon/icon.png" width="57"/>
@@ -74,8 +75,5 @@
     <param name="ios-package" onload="true" value="CDVStatusBar"/>
   </feature>
   <plugin name="cordova-plugin-geolocation" spec="~2.2.0"/>
-  <plugin name="com.phonegap.plugins.PushPlugin" spec="https://github.com/phonegap-build/PushPlugin.git"/>
-  <plugin name="cordova-plugin-badge" spec="https://github.com/katzer/cordova-plugin-badge.git"/>
-  <plugin name="de.appplant.cordova.plugin.local-notification" spec="https://github.com/katzer/cordova-plugin-local-notifications.git"/>
   <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
 </widget>

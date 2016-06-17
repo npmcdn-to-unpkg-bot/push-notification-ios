@@ -31,19 +31,10 @@
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.tecnoaplica.cotizadorvirtual"
         },
-        "com.phonegap.plugins.PushPlugin": {
-            "PACKAGE_NAME": "com.tecnoaplica.cotizadorvirtual"
-        },
-        "cordova-plugin-badge": {
-            "PACKAGE_NAME": "com.tecnoaplica.cotizadorvirtual"
-        },
-        "de.appplant.cordova.plugin.local-notification": {
-            "PACKAGE_NAME": "com.demo.pushnotification"
+        "phonegap-plugin-push": {
+            "SENDER_ID": "XXXXXXX",
+            "PACKAGE_NAME": "com.demo.pushnotification.dmunoz"
         }
     },
-    "dependent_plugins": {
-        "cordova-plugin-app-event": {
-            "PACKAGE_NAME": "com.tecnoaplica.cotizadorvirtual"
-        }
-    }
+    "dependent_plugins": {}
 }
