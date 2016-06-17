@@ -1,0 +1,11 @@
+/* 
+    SASS Theme Variables 
+*/
+/* 
+    SASS Mixins
+*/
+div.toast-bottom-full-width > div.toast-bottom {
+  box-shadow: none !important;
+  margin-bottom: 6px !important; }
+
+/*# sourceMappingURL=toaster.css.map */

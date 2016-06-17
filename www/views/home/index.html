@@ -1,0 +1,22 @@
+<ion-view hide-nav-bar="true" class="home" cache-view="false" can-swipe-back="false">
+    <ion-header-bar>
+        <span class="title">
+            Buscador
+        </span>
+        <button ng-click="goToBasket();" class="button button-icon button-clear" ng-class="{'ion-ios-cart-outline': model.basket.length<=0,'ion-ios-cart': model.basket.length>0}">
+            <span ng-if="model.basket.length>0" class="badge badge-assertive">
+                {{model.basket.length}}
+            </span>
+        </button>
+    </ion-header-bar>
+    
+    <ion-content class="has-subheader has-custom-header">
+        <!-- IOS HEADER FIX -->
+        <ios-header-fix>
+        </ios-header-fix>
+
+        <flex-loading ng-if="model.isLoading" title="Buscando Producto" legend="Espere mientras obtenemos la información...">
+        </flex-loading>
+
+    </ion-content>
+</ion-view>

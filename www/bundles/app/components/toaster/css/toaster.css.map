@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;;;;AAGI,8CAAmB;EACf,UAAU,EAAE,eAAe;EAC3B,aAAa,EAAE,cAAc",
+"sources": ["toaster.scss"],
+"names": [],
+"file": "toaster.css"
+}

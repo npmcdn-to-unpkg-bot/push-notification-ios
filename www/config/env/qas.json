@@ -1,0 +1,4 @@
+{
+	"API_Endpoint": "http://val-wb-ms-02.cloudapp.net/Sodimac/GuiaMaestra/API/v1/",
+    "debugging": true
+}

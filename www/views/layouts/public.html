@@ -1,0 +1,48 @@
+<ion-side-menus enable-menu-with-back-views="true" class="layouts public">
+    <!-- NAV CONTENT -->
+    <ion-side-menu-content drag-content="false">
+        <!-- HEADER -->
+        <ion-nav-bar align-title="center">
+            <!-- LEFT BUTTON'S -->
+            <ion-nav-buttons side="left">
+            </ion-nav-buttons>
+
+            <ion-nav-title>
+                
+            </ion-nav-title>
+            <!-- RIGHT BUTTON'S -->
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <!-- CONTENT -->
+        <ion-nav-view name="content"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <!-- SIDE MENU -->
+    <ion-side-menu side="right">
+        <!-- MENU CONTENT -->
+        <ion-content class="has-header">
+            <ion-list>
+                <ion-item nav-clear menu-toggle="right" ng-repeat="item in config.menu" ng-click="navigateTo(item)" ng-class="{'active': item.active}">
+                    <i class="icon {{item.icon}}"></i>
+                    <span>{{item.label}}</span>
+                    <span ng-if="config.notifications >0 && item.route == 'app.notifications/index'" class="badge badge-assertive">{{config.notifications}}</span>
+                </ion-item>
+
+                <ion-item nav-clear menu-toggle="right" ng-if="config.identity.isAuthenticated()" ng-click="logOut()">
+                    <i class="icon ion-ios-undo"></i>
+                    <span>Cerrar Sesión</span>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+
+        <!-- FOOTER -->
+        <ion-footer-bar>
+            <div>
+                <img ng-src="bundles/app/css/images/sodimac-constructor.png" />
+            </div>
+        </ion-footer-bar>
+    </ion-side-menu>
+</ion-side-menus>

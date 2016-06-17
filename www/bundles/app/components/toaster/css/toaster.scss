@@ -1,0 +1,8 @@
+@import "../../../css/_variables";
+@import "../../../css/_flexbox";
+div.toast-bottom-full-width {
+    > div.toast-bottom {
+        box-shadow: none !important;
+        margin-bottom: 6px !important;
+    }
+}
